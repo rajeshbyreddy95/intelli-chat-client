@@ -28,7 +28,7 @@ const Chat = () => {
     setLoading(true);
 
     try {
-      const res = await api.post(`${BACKEND}/chat`, { message });
+      const res = await api.post(`/chat`, { message });
       const botReply = cleanResponse(res.data.response || "");
       setChatLog((prev) => [...prev, { sender: "bot", text: botReply }]);
     } catch (error) {

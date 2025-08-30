@@ -1,7 +1,7 @@
 import axios from "axios";
 
 // ✅ Central backend URL
-const BACKEND_URL = "http://127.0.0.1:5040";  
+const BACKEND_URL = "https://intelli-chat-server.onrender.com";  
 
 // ✅ Axios instance
 const api = axios.create({

@@ -37,7 +37,7 @@ const PdfSummariser = () => {
         const formData = new FormData();
         formData.append("file", file);
 
-        const res = await api.post(`${BACKEND}/summarize`, formData, {
+        const res = await api.post(`/summarize`, formData, {
           headers: { "Content-Type": "multipart/form-data" },
           timeout: 120000,
         });
@@ -86,7 +86,7 @@ const PdfSummariser = () => {
     try {
       setLoading(true);
       const res = await api.post(
-        `${BACKEND}/ask_with_context`,
+        `/ask_with_context`,
         { message: question, page_text: pageText },
         { timeout: 60000 }
       );
